@@ -70,9 +70,7 @@ Example export structure:
   }
 }
 
-
-
-
+---
 
 # React + Vite
 
