@@ -12,13 +12,13 @@ const FunctionNode = ({ data, selected }) => {
         position: 'relative',
       }}
     >
-      <Handle type="target" position="left" id="input" isConnectable={true} />
+      <Handle type="target" position="left" id={`input-${data.label}`} isConnectable={true} />
       🔧 {data.label}
       <br />
       ⮡ In: {data.input?.join(', ') || ''}
       <br />
       ⮡ Out: {data.output?.join(', ') || ''}
-      <Handle type="source" position="right" id="output" isConnectable={true} />
+      <Handle type="source" position="right" id={`output-${data.label}`} isConnectable={true} />
     </div>
   );
 };

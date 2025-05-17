@@ -11,9 +11,9 @@ const VariableNode = ({ data, selected }) => (
       position: 'relative',
     }}
   >
-    <Handle type="target" position="left" id="input" isConnectable={true} />
+    <Handle type="target" position="left" id={`input-${data.label}`} isConnectable={true} />
     🧮 {data.label}
-    <Handle type="source" position="right" id="output" isConnectable={true} />
+    <Handle type="source" position="right" id={`output-${data.label}`} isConnectable={true} />
   </div>
 );
 

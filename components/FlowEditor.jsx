@@ -24,7 +24,7 @@ const FlowEditor = ({
   );
 
   const isValidConnection = ({ sourceHandle, targetHandle }) =>
-    sourceHandle === 'output' && targetHandle === 'input';
+      sourceHandle?.startsWith('output') && targetHandle?.startsWith('input')
 
   return (
     <ReactFlow

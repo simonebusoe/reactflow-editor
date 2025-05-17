@@ -217,6 +217,17 @@ export default function App() {
     setSidePanelNode(node);
   };
 
+  const setTaskEdges = (newEdges) => {
+  setTasks((prev) =>
+    prev.map((t) =>
+      t.id === activeTaskId
+        ? { ...t, flow: { ...t.flow, edges: typeof newEdges === 'function' ? newEdges(t.flow.edges) : newEdges } }
+        : t
+      )
+    );
+  };
+
+
   return (
     <ReactFlowProvider>
       <div style={{ height: '100vh', display: 'flex' }}>
@@ -245,6 +256,7 @@ export default function App() {
             edges={activeTask?.flow.edges || []}
             onNodesChange={(changes) => setActiveFlow('nodes', changes)}
             onEdgesChange={(changes) => setActiveFlow('edges', changes)}
+            setEdges={setTaskEdges}
             onSelectionChange={onSelectionChange}
             onNodeDoubleClick={onNodeDoubleClick}
             nodeTypes={nodeTypes}
