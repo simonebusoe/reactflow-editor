@@ -28,6 +28,7 @@ This project is a visual JSON-based task configuration editor using [React Flow]
 
 ## 🧱 Project Structure
 
+```
 src/
 ├── App.jsx # Main logic, routes components
 ├── components/
@@ -41,6 +42,7 @@ src/
 │ └── FunctionNode.jsx
 ├── utils/ # (optional) JSON helpers, constants
 
+```
 
 ---
 
@@ -70,7 +72,7 @@ Example export structure:
   }
 }
 
----
+```
 
 # React + Vite
 
